@@ -1,0 +1,58 @@
+# Estimated Tax Calculator Configuration
+# ========================================
+# Edit these values to match your expected income for the tax year.
+# All monetary values are in dollars (no commas or $ signs needed).
+
+# Filing Status
+# Options: single, married_filing_jointly, married_filing_separately, head_of_household
+filing_status: single
+
+# W-2 Employment Income
+# ---------------------
+w2_wages: 150000                    # Total expected W-2 wages
+w2_federal_withholding: 0           # Federal tax withheld (0 = auto-estimate from brackets)
+
+# RSU Income (Restricted Stock Units)
+# -----------------------------------
+# RSU income is typically withheld at a flat 22% supplemental rate,
+# which may be less than your marginal tax rate.
+rsu_income: 150000                  # Total expected RSU vesting value
+rsu_withholding: 0                  # Leave at 0 to auto-calculate at 22%
+                                    # Or enter actual withholding if different
+
+# Investment Income (Taxable Brokerage)
+# -------------------------------------
+qualified_dividends: 5000           # Dividends eligible for lower tax rates
+ordinary_dividends: 1000            # Non-qualified dividends (taxed as ordinary income)
+interest_income: 2000               # Interest from savings, bonds, etc.
+short_term_capital_gains: 0         # Gains on assets held < 1 year
+long_term_capital_gains: 0          # Gains on assets held >= 1 year
+
+# Other Income
+# ------------
+other_income: 0                     # Freelance, rental, etc.
+
+# Deductions
+# ----------
+use_standard_deduction: true        # Set to false to use itemized deductions
+itemized_deductions: 0              # Only used if use_standard_deduction is false
+above_line_deductions: 23000        # 401(k), HSA, IRA contributions, etc.
+
+# Tax Credits
+# -----------
+tax_credits: 0                      # Child tax credit, education credits, etc.
+
+# Prior Year Tax (for Safe Harbor Calculation)
+# --------------------------------------------
+# Safe harbor: Avoid penalties by paying 100% of prior year tax
+# (or 110% if prior year AGI exceeded $150,000)
+prior_year_tax: 110000              # Total tax from prior year's return (line 24)
+prior_year_agi: 1000000             # AGI from prior year's return
+
+# Estimated Payments Already Made
+# -------------------------------
+estimated_payments_made: 0          # Estimated tax payments already made this year
+
+# Virginia State Tax
+# ------------------
+va_withholding: 0                   # VA state withholding (0 = auto-estimate from brackets)
