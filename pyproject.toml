@@ -1,0 +1,11 @@
+[project]
+name = "personal-finance"
+version = "0.1.0"
+description = "Personal finance tools including quarterly estimated tax calculator (IRS 1040-ES)"
+requires-python = ">=3.10"
+dependencies = [
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+estimated-tax = "estimated_tax_calculator:main"
