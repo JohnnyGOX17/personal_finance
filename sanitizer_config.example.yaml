@@ -1,0 +1,27 @@
+# PDF Sanitizer Configuration
+# Copy this file to sanitizer_config.yaml and fill in your PII.
+# sanitizer_config.yaml is gitignored — do NOT commit it.
+
+# Names to redact (include common variations/capitalizations)
+names:
+  - "Your Full Name"
+  - "YOUR FULL NAME"
+  - "Your Name"
+
+# Address lines to redact (include each line separately, plus variations)
+addresses:
+  - "123 Your Street"
+  - "123 YOUR ST"
+  - "Your City, ST 12345"
+  - "YOUR CITY ST 12345"
+
+# Additional literal strings to redact (employer names, etc.)
+custom: []
+
+# Toggle regex-based detections (all default to true)
+redact_ssn: true
+redact_ein: true
+redact_phone: true
+redact_email: true
+redact_dob: true
+redact_account_numbers: true
