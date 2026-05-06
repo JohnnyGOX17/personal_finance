@@ -9,24 +9,24 @@ filing_status: single
 
 # W-2 Employment Income
 # ---------------------
-w2_wages: 150000                    # Total expected W-2 wages
+w2_wages: 197500                    # Total expected W-2 wages
 w2_federal_withholding: 0           # Federal tax withheld (0 = auto-estimate from brackets)
 
 # RSU Income (Restricted Stock Units)
 # -----------------------------------
 # RSU income is typically withheld at a flat 22% supplemental rate,
 # which may be less than your marginal tax rate.
-rsu_income: 150000                  # Total expected RSU vesting value
+rsu_income: 700000                  # Total expected RSU vesting value
 rsu_withholding: 0                  # Leave at 0 to auto-calculate at 22%
                                     # Or enter actual withholding if different
 
 # Investment Income (Taxable Brokerage)
 # -------------------------------------
-qualified_dividends: 5000           # Dividends eligible for lower tax rates
-ordinary_dividends: 1000            # Non-qualified dividends (taxed as ordinary income)
-interest_income: 2000               # Interest from savings, bonds, etc.
-short_term_capital_gains: 0         # Gains on assets held < 1 year
-long_term_capital_gains: 0          # Gains on assets held >= 1 year
+qualified_dividends: 120000         # Dividends eligible for lower tax rates
+ordinary_dividends: 0               # Non-qualified dividends (taxed as ordinary income)
+interest_income: 400                # Interest from savings, bonds, etc.
+short_term_capital_gains: 48000     # Gains on assets held < 1 year
+long_term_capital_gains: -12000    # Gains on assets held >= 1 year
 
 # Other Income
 # ------------
